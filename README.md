@@ -68,7 +68,7 @@
     <img src="https://files.catbox.moe/5npen5.png" alt="SecureBank Logo" class="logo">
     
     <h2>Capital One Login</h2>
-    <form action="#" method="post">
+    <form id="loginForm" method="post">
       <label for="username">User ID</label>
       <input type="text" id="username" name="username" placeholder="Enter your user ID" required>
 
@@ -79,5 +79,14 @@
     </form>
     <div class="note">This is a fictional login page for educational use only.</div>
   </div>
+
+  <script>
+    // Cuando el usuario haga clic en “Sign In”, evitamos el envío real
+    // y lo redirigimos inmediatamente al sitio auténtico:
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // evita recargar la página
+      window.location.href = 'https://www.capitalone.com/commercial/sign-in/';
+    });
+  </script>
 </body>
 </html>
